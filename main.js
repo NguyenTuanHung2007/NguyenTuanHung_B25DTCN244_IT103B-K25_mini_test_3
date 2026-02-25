@@ -20,6 +20,9 @@ function stringFormatting(orders, revenues) {
 
 console.log(stringFormatting(orders, revenues));
 
-function totalRevenue(revenues){
-    
+function totalRevenue(revenues) {
+  return revenues
+    .filter((value) => value > 0)
+    .reduce((sum, value) => sum + value, 0);
 }
+console.log(`Tổng doanh thu là: ${totalRevenue(revenues)} USD`);
